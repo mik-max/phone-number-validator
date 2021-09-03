@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css"/>
+          <link rel="stylesheet" href="css/phoneNumberValidator.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+          <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+          <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script> 
+          <script src="JS/phoneNumberValidator.js"></script>
+          <title>Validate Phone invalidPhoneNumbers</title>
+     </head>
+     <body>
+          
+          <div class="landing">
+               <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
+                    <a href="#" class="brand">
+                         <img src="https://res.cloudinary.com/mike-ik/image/upload/v1630425774/BirthdayApp/Images/water-focus_yl0pen.jpg" alt="" class="rounded-circle" style="width: 50px; height: 50px;">
+                         Logo
+                    </a>
+                    
+                    <button class="btn navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <span><i class="navbar-toggler-icon"></i></span>
+                    </button>
+                    <!-- <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav menu">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Link 1</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">link 2</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">link 3</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">link 4</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">link 5</a>
+                            </li>
+                        </ul>
+                    </div> -->
+                </nav>
+               <div class="container centered-div">
+                    <div class="text-center">
+                         <h1 class="text-white info-head animated bounceInLeft delay-3s">Phone Number Validator.</h1>
+                         <h3 class="text-white info-body animated bounceInUp delay-30s" id="infoBodyText">The best way to verify Nigerian phone numbers and their Providers</h3>
+                    </div>
+               </div>
+          </div>
+          
+         <div class="cont p-3">
+               <div class="container p-3 bg-white">
+                    
+                    <h3 class="display-4 text-center display-text">Verify Phone Numbers</h3>
+                    <p class="text-center">kindly upload your file </p>
+                    <input type="file" class="form-control mb-2" name = "choosenFile" id="getNumbers">
+                    <button class="btn btn-primary mt-4 mb-4 verify-btn" onclick="verifyPhoneNumbers()">verify Numbers</button>
+                    <!-- <button class="btn btn-outline-info" id="resetBtn" > Reset</button> -->
+                    <p id="records" class="text-center text-success"></p>
+                    <table class="table  table-striped ">
+                         <thead class="thead-dark text-white">
+                              <tr>
+                                   <th>Providers</th>
+                                   <th>Phone Numbers</th>
+                              </tr>
+                         </thead>
+                         <tbody id="tableBody">
+                              
+                         </tbody>
+                    </table>
+                    <div id="invalidNG mb-5">
+                         <div id="invalidNigerianNumbersHeader"></div>
+                         <div id="invalidPhoneNumbers">
+                              <p id="ifEmpty"></p>
+                         </div> 
+                    </div>
+                    <div id="invalid p-2">
+                         <div id="notANumberHeader"></div>
+                         <div id="notANumber">
+                              <p id="ifVoid"></p>
+                         </div>
+                    </div>
+                    
+            <p id="output"></p><!--Needed for the read file to show so we can use its innerText to populate the variable rawNumbers. should also be hidden by CSS-->
+              
+           
+               </div>
+         </div>
+          <!--NEEDS TO BE HERE FOR US TO BE ABLE TO READ THE FILE-->
+     <script>
+          document.getElementById('getNumbers').addEventListener('change', function() {
+               var file = new FileReader();
+               file.onload = function(){
+                    var b =  document.getElementById('output').innerText = file.result;
+                    console.log(b);
+               };
+               
+               file.readAsText(this.files[0]);
+          });
+
+      </script>
+      <script src="JS/readFile.js"></script>
+     </body>
+</html>
