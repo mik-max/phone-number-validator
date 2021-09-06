@@ -76,9 +76,9 @@
      letter-spacing: 3px;
    
 }
-#output{
+/* #output{
      display: none;
-}
+} */
 @media only screen and (max-width: 800px){
      .responsiveHeader{
           font-size: 20px;

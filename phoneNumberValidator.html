@@ -64,6 +64,7 @@
                     <h3 class="display-4 text-center display-text">Verify Phone Numbers</h3>
                     <p class="text-center">kindly upload your file </p>
                     <input type="file" class="form-control mb-2" name = "choosenFile" id="getNumbers">
+                    <textarea name="" id="output" cols="30" rows="10"></textarea>
                     <button class="btn btn-primary mt-4 mb-4 verify-btn" onclick="verifyPhoneNumbers()">verify Numbers</button>
                     <!-- <button class="btn btn-outline-info" id="resetBtn" > Reset</button> -->
                     <p id="records" class="text-center text-success"></p>
@@ -91,8 +92,6 @@
                          </div>
                     </div>
                     
-            <p id="output"></p><!--Needed for the read file to show so we can use its innerText to populate the variable rawNumbers. should also be hidden by CSS-->
-              
            
                </div>
          </div>
