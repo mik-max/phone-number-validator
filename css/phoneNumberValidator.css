@@ -79,6 +79,9 @@
 /* #output{
      display: none;
 } */
+.inner-cont{
+     width: 75%;
+}
 @media only screen and (max-width: 800px){
      .responsiveHeader{
           font-size: 20px;
@@ -121,7 +124,11 @@
           font-size: 18px;
      }
 }
-
+@media only screen and (max-width: 450px){
+     .inner-cont{
+          width: 95%;
+     }
+}
 @media only screen and (max-width: 400px){
      .centered-div{
           align-self: center;
@@ -138,6 +145,7 @@
      .display-text{
           font-size: 25px;
      }
+     
 }
 @media only screen and (max-width: 349px){
      .info-head{
