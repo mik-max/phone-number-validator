@@ -23,13 +23,13 @@
           <div class="landing">
                <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
                     <a href="#" class="brand">
-                         <img src="https://res.cloudinary.com/mike-ik/image/upload/v1630425774/BirthdayApp/Images/water-focus_yl0pen.jpg" alt="" class="rounded-circle" style="width: 50px; height: 50px;">
+                         <img src="images/water-focus.jpg" alt="" class="rounded-circle" style="width: 50px; height: 50px;">
                          Logo
                     </a>
                     
                     <button class="btn navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavbar">
                         <span><i class="navbar-toggler-icon"></i></span>
-                    </button>
+                    </button> 
                     <!-- <div class="collapse navbar-collapse" id="collapsibleNavbar">
                         <ul class="navbar-nav menu">
                             <li class="nav-item">
@@ -59,11 +59,11 @@
           </div>
           
          <div class="cont p-3">
-               <div class="container p-3 bg-white">
-                    
+               <div class="container p-3 bg-white inner-cont">
                     <h3 class="display-4 text-center display-text">Verify Phone Numbers</h3>
-                    <p class="text-center">kindly upload your file </p>
+                    <p class="text-center">kindly upload your text file </p>
                     <input type="file" class="form-control mb-2" name = "choosenFile" id="getNumbers">
+                    <textarea name="" id="output" cols="30" rows="8" class="form-control"></textarea>
                     <button class="btn btn-primary mt-4 mb-4 verify-btn" onclick="verifyPhoneNumbers()">verify Numbers</button>
                     <!-- <button class="btn btn-outline-info" id="resetBtn" > Reset</button> -->
                     <p id="records" class="text-center text-success"></p>
@@ -91,8 +91,6 @@
                          </div>
                     </div>
                     
-            <p id="output"></p><!--Needed for the read file to show so we can use its innerText to populate the variable rawNumbers. should also be hidden by CSS-->
-              
            
                </div>
          </div>

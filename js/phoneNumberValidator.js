@@ -1,5 +1,5 @@
 function verifyPhoneNumbers(){
-      var rawNumbers = document.getElementById('output').innerText;
+      var rawNumbers = document.getElementById('output').value;
       rawNumbers += '';
      console.log(rawNumbers);
      var arrayOfNumbers = [];
